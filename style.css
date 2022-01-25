@@ -536,7 +536,7 @@ footer span a:hover{
         z-index: 999;
     }
     .menu-btn i.active:before{
-        content: rgba(105, 44, 204, 0.867)/;
+        content: rgba(105, 44, 204, 0.867);
     }
     .navbar .menu {
         position: fixed;
