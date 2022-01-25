@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar{
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-family: 'ubuntu',sans-serif;
+    padding: 30px 0;
+}
+.navbar.sticky{
+      background: slateblue;
+      padding: 20px 0;
+}
+.navbar .logo a{
+    color: white;
+    font-weight: 700;
+    font-size: 35px;
+}
+.navbar .logo a span{
+    color: slateblue;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: whitesmoke;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .m-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.m-width{
+    max-width: 1800px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar .menu li a{
+    color: rgb(243, 241, 241);
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+
+/* Menu */
+.menu-btn{
+    font-size: 25px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+/* scroll up button */
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 43px;
+    background: red;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+/* Home */
+.home{
+    background: url(./pexels-r-fera-432059.jpg) no-repeat center;
+    height: 100vh;
+    display: flex;
+    color: white;
+    min-height: 500px;
+    font-family: 'ubuntu',sans-serif;
+}
+.home .m-width{
+    margin: auto 0 auto 55px;
+}
+.home .h-content .text-1{
+    font-size: 28px;
+    font-weight: 200;
+}
+.home .h-content .text-2{
+    font-size: 75px;
+    font-weight: 700;
+    margin-left: -3px;
+}
+.home .h-content .text-3{
+    font-size: 45px;
+    margin: 5px 0;
+}
+.home .h-content .text-3 span{
+    font-weight: 600;
+    color: slateblue;
+}
+.home .h-content a{
+    display: inline-block;
+    background: slateblue;
+    color: white;
+    font-size: 25px;
+    padding: 15px 26px;
+    margin-top: 14px;
+    border-radius: 6px;
+    font-weight: 300;
+    border: 1px solid rgb(178, 176, 192);
+}
+.home .h-content a:hover{
+    color: white;
+    background: none;
+}
+/* .... */
+
+section{
+    padding: 100px 0;
+}
+
+section .title{
+    font-family: 'ubuntu',sans-serif;
+    text-align: center;
+    font-weight: 500;
+    font-size: 45px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+section .title::before{
+    position: absolute;
+    content: "";
+    bottom: 10px;
+    left: 50%;
+    width: 190px;
+    height: 3.5px;
+    background: black;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    font-size: 21px;
+    padding: 5px;
+    color: slateblue;
+    background: white;
+    transform: translateX(-50%);
+}
+.about .about-content,
+.service .service-content,
+/* .contact .contact-content */
+.skill .skill-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* ... */
+
+
+
+/* About */
+.about, .service, .skill, .team ,.contact, footer{
+    font-family: 'poppins',sans-serif;
+}
+
+.about .title::after{
+    content: "who i am";
+}
+.about .about-content .left img{
+    height: 600px;
+    width: 600px;
+    border-radius: 6px;
+    /* object-fit: cover; */
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .right{
+    width: 50%;
+}
+.about .about-content .right .text{
+    font-size: 30px;
+    font-family: 800;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: slateblue;
+    font-weight: 600;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+
+        display: inline-block;
+        background: slateblue;
+        color: white;
+        font-size: 20px;
+        padding: 12px 25px;
+        margin-top: 14px;
+        font-weight: 500;
+        border-radius: 6px;
+        font-weight: 300;
+        border: 1px solid rgb(178, 176, 192);
+}
+.about .about-content .right a:hover{
+    color: slateblue;
+    background:lightgrey;
+}
+
+
+
+/* service */
+.service, .team{
+    background: black;
+    color: white;
+}
+.service .title::after,
+.team .title::after{
+    content: "what i provide";
+    font-size: 21px;
+    background: black;
+}
+.service .title::before,
+.team .title::before{
+    background: white;
+}
+
+.service .service-content .card{
+    width: calc(33% - 20px);
+    text-align: center;
+    background: slateblue;
+    padding: 20px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.service .service-content .card i{
+    font-size: 40px;
+    color: white;
+}
+.service .service-content .card:hover{
+    background: crimson;
+}
+
+.service .service-content .card .text{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.service .service-content .card .box{
+    transition: all 0.3s ease;
+}
+.service .service-content .card:hover .box{
+    transform: scale(1.5);
+}
+
+/* Skill */
+.skill .title::after{
+    content: "what i know";
+}
+.skill .skill-content .C{
+    width: calc(50% - 30px);
+}
+.skill .skill-content .left .text{
+     font-size: 20px;
+     font-weight: 600;
+     margin-bottom: 10px;
+}
+.skill .skill-content .left p{
+    text-align: justify;
+}
+.skill .skill-content .left a{
+        display: inline-block;
+        background: slateblue;
+        color: white;
+        font-size: 20px;
+        padding: 8px 16px;
+        margin-top: 14px;
+        font-weight: 500;
+        border-radius: 6px;
+        border: 1px solid rgb(207, 175, 181);
+        transition: all 0.3s ease;
+}
+.skill .skill-content .left a:hover{
+    color: crimson;
+    background: none;
+}
+.skill .skill-content .right .bars{
+    margin-bottom: 15px;
+}
+.skill .skill-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skill .skill-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skill .skill-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: gray;
+    position: relative;
+}
+.skill .skill-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: red;
+}
+.skill .skill-content .right .html::before{
+    width: 90%;
+}
+.skill .skill-content .right .css::before{
+    width: 70%;
+}
+.skill .skill-content .right .js::before{
+    width: 65%;
+}
+.skill .skill-content .right .react::before{
+    width: 50%;
+}
+.skill .skill-content .right .php::before{
+    width: 40%;
+}
+
+
+/* Teams section */
+.team .title::after{
+    content: "who with me";
+}
+.team .carousel .card img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 6px solid crimson;
+    object-fit: cover;
+    transition: all 0.2s ease;
+}
+.team .carousel .card:hover img{
+    border-color: #fff;
+}
+.team .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+.team .carousel .card:hover{
+    background: slateblue;
+}
+
+.team .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.team .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.team .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.owl-dots{
+      text-align: center;
+      margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid slateblue!important;
+    margin: 0 7px;
+    transition: all 0.2s ease;
+}
+.owl-dot.active{
+    width: 40px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: slateblue!important;
+}
+
+
+/* Contact */
+.contact .title::after{
+    content: "reach us";
+}
+ .contact .contact-content .C{
+    width: calc(50% - 30px);
+} 
+.contact .contact-content .text{
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+} 
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row
+{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 27px;
+    color:red;
+}
+/* .contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+} */
+
+.C-right{
+    float: right;
+    text-align: right;
+}
+#right{
+    margin-right: 35%;
+}
+.text{
+    font-size: 25px;
+    font-weight: 500;
+    
+}
+
+/* VIdeo */
+.videos{
+    padding: 30px;
+    margin-top: 35px;
+    /* margin: 50px; */
+    text-align: center;
+    background: #333;
+}
+/* .in{
+    padding: 10px;
+    margin: 30px;
+} */
+
+
+
+/* Footer */
+footer{
+    background: #333;
+    padding: 25px 30px;
+    color: white;
+    text-align: center;
+}
+footer span a{
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+/* Media quories responsive */
+@media (max-width: 1300px){
+    .home .m-width{
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1100px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+        
+    }
+}
+@media (max-width: 995śpx){
+    .m-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 900px){
+    .m-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: rgba(105, 44, 204, 0.867)/;
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: black;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu .active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .h-content .text-2{
+        font-size: 70px;
+        
+    }
+    .home .h-content .text-3{
+        font-size: 40px;
+    }
+    .home .h-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .about .about-content .C{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .m-width{
+        max-width: 800px;
+       
+    }
+    .service .service-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skill .skill-content .C{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .videos{
+        width: 100%;
+    }
+
+}
+@media (max-width: 690px){
+    .m-width{
+        padding: 0 25px;
+    }
+    .home .h-content .text-2{
+        font-size: 60px;
+        
+    }
+    .home .h-content .text-3{
+        font-size: 35px;
+    }
+    .home .h-content a{
+        font-size: 20px;
+        /* padding: 8fpx 24px; */
+    }
+    .service .service-content .card{
+        width: 100%;
+    
+    }
+    
+}
+@media (max-width: 500px){
+    .home .h-content .text-2{
+        font-size: 50px;
+        
+    }
+    .home .h-content .text-3{
+        font-size: 27px;
+    }
+    .videos{
+        width: 100%;
+    }
+}
